@@ -119,6 +119,58 @@ z-index 먼저 나타나는 순서 : 값이 클 수록 가장 위에 나타남.
 margin을 0으로 설정했음에도 공백이 생기는 현상은 다른 객체가
 block이여서 공백이 생기는 경우가 종종 있음.
 
+화면이 오버가 난다면
+- grid-templete-rows/columns에 fr 값 분석해보기
+- display가 block으로 설정된 것 중에 화면을 넘어가는 위치에 넣어준 것이 아닌지 확인해보기
+
+F12 눌러서 수시로 확인해보기
+
+**a태그를 활용한 Button**
+
+링크 State
+- link : 한번도 안 누른 상태 (Default)
+- visited : 한번 누름
+- hover : 마우스 올려둠
+- active : 마우스로 누르고 있음
+
+링크 target
+- _blacnk : 새창
+- _self : 현재 프레임(기본)
+- _parent : 부모 프레임
+- _top : 가장 상위 프레임
+
+이미지 링크 걸기 : a 태그 안에 img 태그를 넣음  
+js 버튼 링크는 button onclick="링크주소"
+
+**button**
+`<button class="btn">button 태그</button>`
+`<a href="#" class="bun">a 태그</a>`
+`<input type="button" value="input 태그" class="btn">`
+
+hover : 마우스 오버
+
+active : 클릭한 상태
+
+focus : 가장 중요한 상태 지정, 다른 state 를 무시함
+
+visited : 이미 클릭한 요소
+
+[버튼 태그 스타일링](https://blog.naver.com/brusher3063/221657821331)
+[버튼 테두리 없애는 법](https://blog.naver.com/sun_ldl/221996230241)
+
+
+**input**
+`<input type="text">`
+
+transparent라는 값은 부모를 따라가는 값임.
+
+transition : CSS 점진적 변화 애니메이션 `transition: all 0.3s;`
+
+투명도 : `opacity: 0.3;`
+
+마우스 커서 변경 : `cursor:pointer;`
+
+
 ---
 ## etc
 
@@ -141,6 +193,51 @@ style 태그 말고 속성을 통해서도 CSS를 사용할 수 있다.
 
 속성을 많이 알 수록 표현이 풍부하고 선택자를 많이 알 수록 속성을 잘 활용할 수 있음. 
 
-
+**HTML 기본 셋팅 초기화**
+``` css
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+```
 
 ---
