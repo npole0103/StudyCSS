@@ -170,6 +170,10 @@ transition : CSS 점진적 변화 애니메이션 `transition: all 0.3s;`
 
 마우스 커서 변경 : `cursor:pointer;`
 
+[input 스타일링](https://webdir.tistory.com/429)
+
+# Projection 만들면서 느낀점
+**HTML 설계를 잘하자. tag class id를 구조적으로 잘 설계 하자**
 
 ---
 ## etc
