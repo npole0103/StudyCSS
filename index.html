@@ -1,93 +1,119 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+    Only support chrome browser
+    CloneCodingLink : https://templated.co/items/demos/projection/index.html
+-->
 
 <head>
-    <title>SUHEON - WEB</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuHeon</title>
+    <link rel="stylesheet" href="css/projectionCopy.css">
 </head>
 
 <body>
-    <h1><a href="index.html">WEB</a></h1>
-    <div id="grid">
-        <ol>
-            <li><a href="1.html">HTML</a></li>
-            <li><a href="2.html">CSS</a></li>
-            <li><a href="3.html">JAVASCRIPT</a></li>
-        </ol>
-        <div id="article">
-            <h2>HTML <a href="https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=web"
-                    target="_blank" title="html define">WEB</a> 정의란 무엇인가</h2>
+    <div id="mainGrid">
+        <header>
+            <div class="img"></div>
+            <div class="img-cover"></div>
 
-            <strong>Hypertext <u>Markup</u> Language </strong>
+            <span class="title">
+                <a href="index.html"> <strong>Projection</strong> by SUHEON</a>
+            </span>
 
-            <br><br>
-            <p>
-                Enumerating objects: 7, done.
-                Counting objects: 100% (7/7), done.
-                Delta compression using up to 8 threads
-            </p>
+            <span id="nav">
+                <a href="index.html">Home</a>
+                <a href="css/projectionCopy.css">CSS</a>
+                <a href="README.md">README</a>
+            </span>
 
-            <img src="img/coding.jpg" width="100%">
+            <h1>Welcome to my projection</h1>
+            <div id="grid">
+                <ul>
+                    <li><strong>Github</strong>
+                        <br> <br> <img src="img/github.png" alt="github.png">
+                        <br> <br> <span>Welcome to gihub page </span>
+                    </li>
+                    <li><strong>Instagram</strong>
+                        <br> <br> <img src="img/instagram.png" alt="instagram.png">
+                        <br> <br> <span>Welcome to instagram page </span>
+                    </li>
+                    <li><strong>Faceboock</strong>
+                        <br> <br> <img src="img/facebook.png" alt="facebook.png">
+                        <br> <br> <span>Welcome to facebook page </span>
+                    </li>
+                </ul>
+                <br> <br>
+                <button class="btn">SHOW DETAILS</button>
+            </div>
 
-            <p style="margin-top:100px;">
-                Compressing objects: 100% (5/5), done.
-                Writing objects: 100% (5/5), 608 bytes | 304.00 KiB/s, done.
-                Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
-            </p>
-        </div>
+
+        </header>
+
+
+        <section>
+            <div class="sectionBox">
+                <div class="first-para">
+                    <img src="img/phone.png" alt="phone.png">
+                    <br><br>
+                    <h2>SmartPhone</h2>
+                    <br><br>
+                    <p>
+                        My SmartPhone is Galaxy Note Ultra 20
+                    </p>
+                    <br><br>
+                    <button class="btn">SHOW DETAILS</button>
+                </div>
+                <div class="first-para">
+                    <img src="img/computer.png" alt="computer.png">
+                    <br><br>
+                    <h2>Computer</h2>
+                    <br><br>
+                    <p>
+                        My Computer is consist of GTX1070 8GB, I7-6700k, DDR4 16GB and SSD512GB.
+                    </p>
+                    <br><br>
+                    <button class="btn">SHOW DETAILS</button>
+                </div>
+            </div>
+        </section>
+
+        <footer">
+            <div id="grid-footer">
+                <div class="mail-title">
+                    <h2>Get in Touch</h2>
+                </div>
+                <div class="mail-box">
+
+                    <p id="name">
+                    <span>Name</span>
+                    <br>
+                    <input type="text" name="name" placeholder="Name">
+                    </p>
+
+                    <p id="email">
+                    <span >Email</span>
+                    <br>
+                    <input type="text" name="email" placeholder="Email">
+                    </p>
+
+                    <p id="message">
+                    <span>Message</span>
+                    <br>
+                    <input type="text" name="message" placeholder="Message">
+                    </p>
+
+                </div>
+                <div class="mail-btn">
+                    <button class="btn">SEND MESSAGE</button>
+                    <br> <br> <br> <br>
+                    <span id="copyright">@copyright SU HEON KIM</span>
+                </div>
+            </div>
+        </footer>
     </div>
-
-    <h1>Comment</h1>
-    <br>
-    <p>
-    <div id="disqus_thread"></div>
-    <script>
-        /**
-        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-        /*
-        var disqus_config = function () {
-        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        };
-        */
-        (function () { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://web1-jhs4rucjn2.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
-            Disqus.</a></noscript>
-    </p>
-
-
-    <h1>Online Chat</h1>
-    <br>
-    <p>
-        <!--Start of Tawk.to Script-->
-        <script type="text/javascript">
-            var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-            (function () {
-                var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-                s1.async = true;
-                s1.src = 'https://embed.tawk.to/5fdb3326a8a254155ab43018/1epo3vkct';
-                s1.charset = 'UTF-8';
-                s1.setAttribute('crossorigin', '*');
-                s0.parentNode.insertBefore(s1, s0);
-            })();
-        </script>
-        <!--End of Tawk.to Script-->
-    </p>
-
-    <h1>Web Visitor Tracing</h1>
-    <br>
-    도메인 등록시 실행해볼 것
-
-    <br> <br>
-
 </body>
 
 </html>
