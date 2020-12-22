@@ -78,6 +78,7 @@ grid-templete-colums : 열로 나누게 됨.
 `#idname ol { }` 이라는 id 이름 뒤에 나온 태그 이름은
 그 아이디 내에 있는 하위 ol 태그들에 대한 내용을 적용할 때 사용.
 
+---
 ## Media Query
 
 `@media(조건식) { }` : 조건이 맞다면 { }안에 해당하는 코드가 실행됨.
@@ -103,14 +104,17 @@ Link 태그는 근시안적으로 보면 문서 다운을 받게 되면 트래�
 캐싱이라는 기술을 사용해서 한번 다운한 파일을 다시 읽기 때문에
 엄청난 효율을 낼 수 있다.
 
-## Projection
+---
+## Projection 웹 만들기 프로젝트
+
+<u>ONLY Support Chrome browser</u>  
+[CopyCodingLink](https://templated.co/items/demos/projection/index.html)
 
 position 속성 : 위치를 셋팅
 - static : 위에서 아래로 배치 top left 무시됨
 - relative : 상대적인 위치
 - absoulute : 절대적인 위치(부모 기준) 스크롤시 그에 따라 움직임
 - fixed : 절대적인 위치(화면 기준) 스크롤시 화면 위치에 그대로 고정
-
 
 background-color 투명색 : `background-color : rgba(0, 0, 0, 0.4);`
 
@@ -155,7 +159,23 @@ focus : 가장 중요한 상태 지정, 다른 state 를 무시함
 
 visited : 이미 클릭한 요소
 
+※ hover, active, focus, visited 등의 속성 값에 :를 붙여서 쓰는 것을 pseudo-class(가상 클래스)라고 한다. `button:hover`로 표현한다.
+
+이와 더불어 input이나 textarea에서 placeholder 같은 옵션은 pseudo-element(가상 요소)라고 하며 콜론을 2개 붙여서 `input::placeholder`로 표현한다.
+자주 사용되는 before after도 가상 요소이다.
+
+``` css
+selector:pseudo-class {
+    property:value;
+}
+
+selector::pseudo-element{
+    property:value;
+}
+```
+
 [버튼 태그 스타일링](https://blog.naver.com/brusher3063/221657821331)
+
 [버튼 테두리 없애는 법](https://blog.naver.com/sun_ldl/221996230241)
 
 
@@ -172,8 +192,29 @@ transition : CSS 점진적 변화 애니메이션 `transition: all 0.3s;`
 
 [input 스타일링](https://webdir.tistory.com/429)
 
+input 대체 입력 태그 : `<textarea></textarea>`
+
+[input은 텍스트 박스를 위치를 바꿀 수 없다](https://stackoverrun.com/ko/q/10890482)
+
+
+**유닛 단위**
+
+em : 부모 요소에 크기 대한 자신의 상대 크기 정함. ex) 부모 20px -> 0.5em이면 10px
+
+rem : 루트 요소에 대한 자신의 크기를 정함. 부모가 웹 브라우저의 기본 글자 크기 16px
+
+% : 부모 요소에 대한 상대 크기 정함. em과 방식은 같지만 상대값으로 정해짐.
+
+fr : fraction의 약어이며 그리드 셀을 배분하는 비율을 표시하는 용도로 사용.
+
+vw/vh : viewport width/height의 약어. 뷰포트 크기의 상대 크기 표현. 1wh == 뷰포트 넓이의 1%
+
 # Projection 만들면서 느낀점
-**HTML 설계를 잘하자. tag class id를 구조적으로 잘 설계 하자**
+## HTML에서 tag class id를 구조적으로 잘 설계 해야 나중에 덜 피곤해진다.  
+
+## CSS에서 같은 영역의 코드는 최대한 한번에 컨트롤 하도록 태그를 설정하자. 코드의 재사용을 지양하고 중복을 최대한 제거하자.  
+
+## 수많은 예제를 만들면서 각각의 태그 클래스 아이디 속성 등을 다양하게 익힐 수록 표현력이 증가할 거 같다. 경험이 가장 중요한 영역이라고 생각됨.
 
 ---
 ## etc
@@ -196,6 +237,7 @@ style 태그 말고 속성을 통해서도 CSS를 사용할 수 있다.
 선택자와 속성이 CSS에서 가장 중요함.
 
 속성을 많이 알 수록 표현이 풍부하고 선택자를 많이 알 수록 속성을 잘 활용할 수 있음. 
+
 
 **HTML 기본 셋팅 초기화**
 ``` css
@@ -241,6 +283,17 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+```
+
+선택자 / 속성 / 값 / 가상 클래스 / 가상 요소
+``` css
+selector:pseudo-class {
+    property:value;
+}
+
+selector::pseudo-element{
+    property:value;
 }
 ```
 

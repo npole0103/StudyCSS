@@ -1,3 +1,10 @@
+/*
+
+Only support chrome browser
+CloneCodingLink : https://templated.co/items/demos/projection/index.html
+
+*/
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -44,10 +51,6 @@ table {
 
 
 
-
-
-
-
 body {
     margin: 0;
     height: 2800px; /*밑 부분 남아서 설정해 줌*/
@@ -59,25 +62,25 @@ button {
     font-size: 18px;
     font-weight: bold;
     font-family:cursive;
-    margin: 0px;
 
     border: 3px solid mediumseagreen;
     border-radius: 20px;
+    transition: all 0.7s; /*점진적 변화 애니메이션*/
 
+    margin: 0px;
     padding-bottom: 10px;
     padding-top: 10px;
     padding-right: 50px;
     padding-left: 50px;
-    transition: all 0.7s;
 }
 
-.btn:hover{
+.btn:hover{ /*버튼 위에 마우스 있을 시*/
     background-color: lightgreen;
     opacity: 0.3;
     cursor:pointer;
 }
 
-.btn:active{
+.btn:active{ /*버튼 클릭 시*/
     cursor:progress;
 }
 
@@ -88,14 +91,16 @@ button {
 
 
 #mainGrid {
-    margin:0;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
     position: relative;
     width: 100%;
     height: 100%;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    padding:0;
+
     color:black;
+
+    margin:0;
+    padding:0;
     z-index: 2;
 }
 
@@ -103,9 +108,10 @@ button {
 
 header .img{
     position: fixed;
-    background-image: url(./bg.jpg);
     width: 100%;
     height: 100vh;
+
+    background-image: url(./bg.jpg);
     background-size:cover;
 }
 
@@ -138,19 +144,22 @@ header .title a{
 
 /*화면 크기 출력 오류*/
 #nav a {
-    align-content: center;
-    text-align: center;
+
     display: inline;
     position: relative;
     top:7%;
     left:60%;
     transform: translate(-50%, -50%);                                                       
+
     font-size: 20px;;
     color: white;
-    z-index: 2;
     text-decoration: none;
+    align-content: center;
+    text-align: center;
+
     margin-right: 20px;
     margin-left: 20px;
+    z-index: 2;
 }
 
 @media(max-width:1500px)
@@ -173,11 +182,14 @@ h1{
     top:20%;
     left:50%;  
     transform: translate(-50%, -50%);
-    border-top: dimgray 2px solid;
+    
     text-align: center;
+    color: white;
+
+    border-top: dimgray 2px solid;
+
     margin:0;
     padding-top: 100px;
-    color: white;
     z-index: 2;
     
 }
@@ -185,19 +197,23 @@ h1{
 #grid {
     position: relative;
     top:30%;
-    text-align: center;
-    margin:0;
+
     color:white;
+    text-align: center;
+
+    margin:0;
     z-index: 2;
 }
 
 #grid ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    list-style: none;
-    margin:0;
+
     width: 100%;
     height: 30vh;
+
+    list-style: none;
+    margin:0;
 }
 #grid ul li {
     border-right: 2px solid dimgray;
@@ -212,17 +228,21 @@ h1{
 
 .sectionBox
 {
-    background-color: white;
+
     display: grid;
     grid-template-rows: 1fr 1fr;
-    margin: 0;
     position: relative;
     width: 100%;
     height: 100vh;
-    z-index: 2;
+
+    background-color: white;
+
     align-content: center;
     text-align: center;
+    margin: 0;
     padding-top:80px;
+
+    z-index: 2;
 }
 
 .sectionBox img{
@@ -246,14 +266,17 @@ h1{
 {
     display: grid;
     grid-template-rows: 1fr 4fr 1fr;
-    background-color: mediumseagreen;
-    margin: 0;
     position: relative;
     width: 100%;
     height: 100vh;
-    z-index: 2;
+
+    background-color: mediumseagreen;
+
     align-content: center;
     text-align: center;
+    margin: 0;
+
+    z-index: 2;
 }
 
 .mail-title {
@@ -261,7 +284,7 @@ h1{
     font-weight: bolder;
     font-family: Georgia;
     color:white;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .mail-box {
@@ -271,13 +294,14 @@ h1{
     font-family: Georgia;
     color:white;
     text-align:left;
+    margin: 30px;
 }
 
-.mail-box #name {
-    margin: 40px;
+.mail-box p {
+    margin: 30px;
 }
 
-#name input {
+.mail-box input {
     position: relative;
     margin-top: 10px;
     width: 100%;
@@ -292,52 +316,29 @@ h1{
     outline: none;
 }
 
-
-.mail-box #email {
-    margin: 40px;
-}
-
-#email input {
-    margin-top: 10px;
-    width: 100%;
-    height: 40px;
-    background-color:transparent;
-    color:azure;
-    font-size: 16px;
-
-    border: 3px solid white;
-    border-radius: 15px;
-
-    outline: none;
-}
-
-
-.mail-box #message {
-    margin: 40px;
-}
-
 #message input{
-    margin-top: 10px;
-    width: 100%;
     height: 15em;
-    background-color:transparent;
-    color:azure;
-    font-size: 16px;
-    
-    border: 3px solid white;
-    border-radius: 20px;
 
-    outline: none;
+    /*
+    line-height: normal;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    vertical-align:top;
+    align-content: center;
+    text-align: center;
+*/
 }
 
+input[type=text] {
+    padding: .3em .5em;
+}
 
 input::placeholder{
     margin-left: auto;
     color:white;
     font-size: 20px;
-    text-align: start;
 }
-
 
 
 .mail-btn button {
