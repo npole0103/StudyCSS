@@ -111,7 +111,7 @@ header .img{
     width: 100%;
     height: 100vh;
 
-    background-image: url(./bg.jpg);
+    background-image: url(../img/bg.jpg); /*css 폴더이므로 ../을 통해 상위 폴더로 이동*/
     background-size:cover;
 }
 
